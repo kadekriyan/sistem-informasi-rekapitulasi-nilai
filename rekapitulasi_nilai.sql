@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Nov 2024 pada 21.37
+-- Waktu pembuatan: 20 Jan 2025 pada 03.55
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `uts_backend_v3`
+-- Database: `rekapitulasi_nilai`
 --
 
 -- --------------------------------------------------------
@@ -53,14 +53,14 @@ CREATE TABLE `mahasiswa` (
   `nim` varchar(20) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `prodi` varchar(100) NOT NULL,
-  `jeni_kelamin` enum('L','P') NOT NULL
+  `jenis_kelamin` enum('L','P') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `mahasiswa`
 --
 
-INSERT INTO `mahasiswa` (`id`, `nim`, `nama`, `prodi`, `jeni_kelamin`) VALUES
+INSERT INTO `mahasiswa` (`id`, `nim`, `nama`, `prodi`, `jenis_kelamin`) VALUES
 (1, '23.01.5056', 'Kadek Riyan Kusuma Putra', 'D3-Teknik Informatika', 'L'),
 (2, '23.01.3948', 'Shenya Kartika', 'D3-Teknik Informatika', 'P'),
 (3, '23.01.5059', 'Bara sabaraba', 'S1-Informatika', 'L'),
@@ -238,7 +238,7 @@ ALTER TABLE `mata_kuliah_mahasiswa`
 -- AUTO_INCREMENT untuk tabel `nilai_mata_kuliah_mahasiswa`
 --
 ALTER TABLE `nilai_mata_kuliah_mahasiswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
